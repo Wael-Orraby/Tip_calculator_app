@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: #c4e3e6;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  height: 100vh;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main img {
+  margin: 2rem;
+}
+.container {
+  padding: 1rem;
+  background-color: #fff;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+}
+
+label {
+  display: block;
+  margin: 1.5rem 0 0.8rem;
+}
+input {
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  text-align: right;
+  padding: 1rem;
+  width: -webkit-fill-available;
+  border-radius: 0.7rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.container div {
+  position: relative;
+}
+.container div input + svg {
+  position: absolute;
+  left: 1rem;
+  top: 4.5rem;
+}
+.precentages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.precent {
+  background-color: #09484c;
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 0.7rem;
+  padding: 1rem;
+}
+.custom {
+  color: #09484c;
+  background-color: #f4f9fa;
+  font-weight: bold;
+  width: 80%;
+  font-size: 1.5rem;
+}
+.precent:hover,
+.result-card button:hover,
+input:hover {
+  cursor: pointer;
+  color: #09484c;
+  background-color: #c4e3e6;
+  border: 2px #5ea89f solid;
+}
+.result-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: #09484c;
+  color: hsl(0, 0%, 100%);
+  border-radius: 0.7rem;
+  justify-content: space-between;
+}
+.result-card div {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 3rem;
+}
+.result-card div div {
+  display: flex;
+  flex-direction: row;
+}
+.result-card div p {
+  position: relative;
+}
+.result-card div p::after {
+  content: "/ person";
+  position: absolute;
+  left: 0;
+  top: 1.3rem;
+  opacity: 0.5;
+  width: 5rem;
+}
+.result-card span {
+  color: #31c0ac;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.result-card button {
+  padding: 1rem;
+  background-color: #31c0ac;
+  border: none;
+  margin-top: 2rem;
+  border-radius: 0.7rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.active {
+  background-color: #31c0ac;
+  color: #09484c;
+}
+
+.error-msg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.error-msg span {
+  color: red;
+}
+@media screen and (min-width: 900px) {
+  body {
+    align-items: center;
+  }
+  .container {
+    max-width: 900px;
+    border-radius: 2rem;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .precentages {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
